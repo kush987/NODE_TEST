@@ -1,0 +1,9 @@
+services:
+  nodeapi:
+    image: blogapi:latest
+    container_name: nodeapi
+    ports:
+      - 5000:4000
+    restart: always
+    environment:
+      - MONGO_URL=mongodb://root:root@localhost:27018/product-service?authSource=admin
